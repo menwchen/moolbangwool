@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In Memory of Jürgen Habermas — The Last Philosopher of Enlightenment</title>
+  <meta name="description" content="A tribute to Jürgen Habermas (1929–2026), the last great defender of reason, dialogue, and the unfinished project of modernity.">
+  <meta property="og:title" content="In Memory of Jürgen Habermas">
+  <meta property="og:description" content="A tribute to the last philosopher of the Enlightenment">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #e8e0d4;
+      --accent: #c9a96e;
+      --muted: #7a7265;
+      --divider: #2a2520;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .lang-switch {
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      z-index: 100;
+    }
+
+    .lang-switch a {
+      color: var(--muted);
+      text-decoration: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      border: 1px solid var(--divider);
+      padding: 0.4rem 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .lang-switch a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(201,169,110,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-dates {
+      font-size: 1.1rem;
+      color: var(--muted);
+      letter-spacing: 0.3em;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--accent);
+      margin-top: 2rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--accent));
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section-number {
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section h2 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .section p {
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
+      color: #c8c0b4;
+      text-align: justify;
+    }
+
+    .quote-block {
+      border-left: 2px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: rgba(201,169,110,0.03);
+    }
+
+    .quote-block p {
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
+
+    .quote-block .attribution {
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin: 3rem auto;
+      opacity: 0.5;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 4rem 2rem 6rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .closing p {
+      font-size: 1.2rem;
+      color: var(--accent);
+      line-height: 2.2;
+      font-style: italic;
+    }
+
+    .closing .final-line {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      font-style: normal;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="lang-switch">
+    <a href="/">한국어</a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-dates">1929 &mdash; 2026</div>
+    <h1>Jürgen Habermas</h1>
+    <p class="hero-subtitle">A tribute to the last philosopher of the Enlightenment</p>
+    <div class="scroll-indicator"></div>
+  </section>
+
+  <main class="content">
+
+    <section class="section fade-in">
+      <div class="section-number">I</div>
+      <h2>A Departure, and the Void Left Behind</h2>
+      <p>
+        On March 15, 2026, Jürgen Habermas left us. He was 96 years old — a life
+        spanning nearly a century. Yet the weight of his absence cannot be measured
+        by years alone.
+      </p>
+      <p>
+        He began thinking amid the ruins left after Auschwitz. Through the Cold War
+        and reunification, through globalization and the digital revolution, he never
+        abandoned the possibility of reason. Some called him "the last philosopher of
+        the Enlightenment." It was not a title — it was closer to a confession.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">II</div>
+      <h2>The Philosopher of Dialogue</h2>
+      <p>
+        Habermas believed that truth is not discovered in solitude but constructed
+        together. His concept of "communicative rationality" was never merely an
+        academic abstraction. It was an expression of profound trust in human beings.
+      </p>
+
+      <div class="quote-block">
+        <p>"The unforced force of the better argument — that is the ideal speech situation."</p>
+        <div class="attribution">— Jürgen Habermas</div>
+      </div>
+
+      <p>
+        Through words, not violence. Through dialogue, not monologue. Through consensus,
+        not domination. The more naïve this faith appeared, the more urgently his
+        philosophy was needed.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">III</div>
+      <h2>Guardian of the Public Sphere</h2>
+      <p>
+        In 1962, a thirty-three-year-old Habermas published <em>The Structural
+        Transformation of the Public Sphere</em>. His account of how the civic public
+        sphere — born in coffeehouses and salons — was gradually colonized by capital
+        and power reads like prophecy in the age of social media.
+      </p>
+      <p>
+        In an era where algorithms engineer public opinion, outrage replaces discourse,
+        and disinformation occupies the seat of truth, what Habermas fought to protect
+        his entire life was simply this: <em>a square where we can still talk to one another.</em>
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">IV</div>
+      <h2>The Courage Not to Abandon Reason</h2>
+      <p>
+        When postmodernism declared the death of reason, Habermas raised a solitary
+        objection: "Modernity is an incomplete project." Reason had not failed — it
+        had simply not yet been fully realized.
+      </p>
+      <p>
+        This was not naïve optimism. It was a generation that had witnessed two World
+        Wars and the Holocaust, declaring nonetheless that it would not let go of the
+        possibility of reason and dialogue. It was not hope — it was will. It was not
+        philosophy — it was ethics.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">V</div>
+      <h2>Constitutional Patriotism — A Grammar for Living Together</h2>
+      <p>
+        His vision of "constitutional patriotism" — loyalty not to blood or soil but
+        to constitutional principles — is a blueprint we must unfold again in an age
+        of division and hatred.
+      </p>
+      <p>
+        What are the conditions under which people of different languages, faiths, and
+        histories can coexist within a single political community? Habermas found the
+        answer not in ethnicity or territory, but in the universal principles of justice
+        and human rights.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section fade-in">
+      <div class="section-number">VI</div>
+      <h2>The World After the Last Enlightenment Thinker</h2>
+      <p>
+        In the space Habermas has left, we are compelled to ask: Has the light of
+        Enlightenment been extinguished, or has each of us inherited its small flame?
+      </p>
+      <p>
+        In an age when artificial intelligence seeks to replace human judgment and
+        democracy is tested from within and without, Habermas's question rings clearer
+        than ever: <em>"Can we still speak to one another? And through that conversation,
+        can we build a better world?"</em>
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="closing fade-in">
+      <p>
+        In the square you defended,<br>
+        we are still talking.<br>
+        Imperfectly, haltingly —<br>
+        but we will not give up.<br>
+        Just as you never did.
+      </p>
+      <p class="final-line">
+        Jürgen Habermas (June 18, 1929 — March 15, 2026)<br>
+        Rest in peace.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>In memoriam — Jürgen Habermas</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
