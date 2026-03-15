@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위르겐 하버마스를 추모하며 — 이 시대 마지막 계몽주의자</title>
+  <meta name="description" content="위르겐 하버마스(1929–2026) 추모. 이 시대 마지막 계몽주의자에게 보내는 추도사.">
+  <meta property="og:title" content="위르겐 하버마스를 추모하며">
+  <meta property="og:description" content="이 시대 마지막 계몽주의자에게 보내는 추도사">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #e8e0d4;
+      --accent: #c9a96e;
+      --muted: #7a7265;
+      --divider: #2a2520;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Serif KR', serif;
+      line-height: 1.9;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(201,169,110,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-dates {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--muted);
+      letter-spacing: 0.3em;
+      margin-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .name-en {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--muted);
+      margin-top: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      color: var(--accent);
+      margin-top: 2rem;
+      font-weight: 400;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, transparent, var(--accent));
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    .section {
+      margin-bottom: 4rem;
+    }
+
+    .section-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.85rem;
+      color: var(--accent);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+      color: #c8c0b4;
+      text-align: justify;
+    }
+
+    .quote-block {
+      border-left: 2px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: rgba(201,169,110,0.03);
+    }
+
+    .quote-block p {
+      font-style: italic;
+      color: var(--accent);
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .quote-block .attribution {
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.8rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+      margin: 3rem auto;
+      opacity: 0.5;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 4rem 2rem 6rem;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .closing p {
+      font-size: 1.15rem;
+      color: var(--accent);
+      line-height: 2.2;
+    }
+
+    .closing .final-line {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--divider);
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* Fade-in animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="hero-dates">1929 &mdash; 2026</div>
+    <h1>
+      위르겐 하버마스
+      <span class="name-en">Jürgen Habermas</span>
+    </h1>
+    <p class="hero-subtitle">이 시대 마지막 계몽주의자에게 보내는 추도사</p>
+    <div class="scroll-indicator"></div>
+  </section>
+
+  <main class="content">
+
+    <section class="section fade-in">
+      <div class="section-number">I</div>
+      <h2>떠남, 그리고 남겨진 빈자리</h2>
+      <p>
+        2026년 3월 15일, 위르겐 하버마스가 우리 곁을 떠났습니다.
+        향년 96세. 거의 한 세기에 걸친 삶이었습니다.
+        그러나 그가 남긴 빈자리의 무게는 한 세기로도 가늠할 수 없습니다.
+      </p>
+      <p>
+        그는 아우슈비츠 이후의 폐허 위에서 사유를 시작했고,
+        냉전과 통일, 세계화와 디지털 혁명을 관통하며
+        끝내 이성의 가능성을 포기하지 않은 사람이었습니다.
+        누군가는 그를 '마지막 계몽주의자'라 불렀습니다.
+        그것은 칭호가 아니라, 고백에 가까운 이름이었습니다.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">II</div>
+      <h2>대화의 철학자</h2>
+      <p>
+        하버마스는 진리를 홀로 발견하는 것이 아니라
+        함께 만들어가는 것이라 믿었습니다.
+        그의 '의사소통적 합리성'은 단순한 학술 개념이 아니었습니다.
+        그것은 인간에 대한 깊은 신뢰의 표현이었습니다.
+      </p>
+
+      <div class="quote-block">
+        <p>"강제 없는 강제, 오직 더 나은 논증의 힘만이 작동하는 곳 — 그곳이 바로 이상적 담화 상황이다."</p>
+        <div class="attribution">— 위르겐 하버마스</div>
+      </div>
+
+      <p>
+        폭력이 아닌 말로, 독백이 아닌 대화로,
+        지배가 아닌 합의로 세계를 구성할 수 있다는 믿음.
+        그것이 순진해 보이는 시대일수록
+        그의 철학은 더욱 절실해졌습니다.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">III</div>
+      <h2>공론장의 수호자</h2>
+      <p>
+        1962년, 서른셋의 하버마스는 『공론장의 구조변동』을 세상에 내놓았습니다.
+        커피하우스와 살롱에서 시작된 시민적 공론장이
+        어떻게 자본과 권력에 의해 잠식되어 가는지를 추적한 이 저작은,
+        오늘날 소셜미디어 시대에 예언서처럼 읽힙니다.
+      </p>
+      <p>
+        알고리즘이 여론을 설계하고, 분노가 담론을 대체하며,
+        가짜뉴스가 진실의 자리를 점령하는 이 시대.
+        하버마스가 평생을 걸어 지키고자 했던 것은
+        바로 '함께 이야기할 수 있는 광장'이었습니다.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">IV</div>
+      <h2>이성을 포기하지 않은 용기</h2>
+      <p>
+        포스트모더니즘이 이성의 종말을 선언할 때,
+        하버마스는 외로운 반론을 제기했습니다.
+        "근대성은 아직 미완의 기획이다."
+        이성이 실패한 것이 아니라, 아직 충분히 실현되지 않았을 뿐이라고.
+      </p>
+      <p>
+        이 말은 단순한 낙관이 아니었습니다.
+        두 차례의 세계대전과 홀로코스트를 목도한 세대가,
+        그럼에도 이성과 대화의 가능성을 놓지 않겠다고 선언한 것.
+        그것은 희망이 아니라 의지였고,
+        철학이 아니라 윤리였습니다.
+      </p>
+    </section>
+
+    <section class="section fade-in">
+      <div class="section-number">V</div>
+      <h2>헌법 애국주의 — 함께 살기 위한 문법</h2>
+      <p>
+        민족이나 혈통이 아닌, 헌법적 원칙에 대한 충성으로
+        공동체를 구성할 수 있다는 그의 '헌법 애국주의'는
+        분열과 혐오가 난무하는 오늘날,
+        우리가 다시 펼쳐보아야 할 설계도입니다.
+      </p>
+      <p>
+        서로 다른 언어, 다른 신앙, 다른 역사를 가진 사람들이
+        하나의 정치 공동체 안에서 공존할 수 있는 조건은 무엇인가.
+        하버마스는 그 답을 피와 땅이 아닌,
+        정의와 인권의 보편적 원칙에서 찾았습니다.
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section fade-in">
+      <div class="section-number">VI</div>
+      <h2>마지막 계몽주의자 이후의 세계</h2>
+      <p>
+        하버마스가 떠난 자리에서 우리는 묻게 됩니다.
+        계몽의 빛이 꺼진 것인가, 아니면 우리 각자가
+        그 작은 불씨를 이어받은 것인가.
+      </p>
+      <p>
+        인공지능이 인간의 판단을 대체하려 하고,
+        민주주의가 안팎으로 시험받는 이 시대에,
+        하버마스의 물음은 더욱 뚜렷해집니다.
+        "우리는 여전히 서로에게 말을 걸 수 있는가.
+        그리고 그 대화를 통해 더 나은 세계를 만들 수 있는가."
+      </p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="closing fade-in">
+      <p>
+        선생님, 당신이 지킨 광장에서<br>
+        우리는 여전히 대화하고 있습니다.<br>
+        서툴고 불완전하지만,<br>
+        포기하지 않겠습니다.<br>
+        당신이 그러했듯이.
+      </p>
+      <p class="final-line">
+        위르겐 하버마스 (1929. 6. 18 — 2026. 3. 15)<br>
+        영면하소서.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>In memoriam — Jürgen Habermas</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
