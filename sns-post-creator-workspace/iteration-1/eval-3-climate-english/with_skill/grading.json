@@ -1,0 +1,15 @@
+{
+  "eval_id": 3,
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "리서치 요약 섹션 포함", "passed": true, "evidence": "Research Summary 섹션에 IUCN, UNEP, OECD 등 출처와 구체적 데이터 포함"},
+    {"text": "X 포스트 포함", "passed": true, "evidence": "X 포스트 1개 존재"},
+    {"text": "Threads 포스트 포함", "passed": true, "evidence": "Threads 포스트 1개 존재"},
+    {"text": "Facebook 포스트 포함", "passed": true, "evidence": "Facebook 포스트 1개 존재"},
+    {"text": "X 포스트 280자 이내", "passed": true, "evidence": "272자로 280자 제한 준수"},
+    {"text": "Threads 포스트 500자 이내", "passed": true, "evidence": "497자로 500자 제한 준수"},
+    {"text": "영어 작성", "passed": true, "evidence": "전체 영어로 작성됨"},
+    {"text": "해시태그 포함", "passed": true, "evidence": "#ClimateChange #PlasticPollution 등 영어 해시태그 포함"},
+    {"text": "플랫폼별 톤 차이", "passed": true, "evidence": "X는 'If plastic were a country' 임팩트 hook, Threads는 'Here's something that keeps bugging me' 개인적 톤, Facebook은 데이터 기반 스토리텔링"}
+  ]
+}

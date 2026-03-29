@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "리서치 요약 섹션 포함", "passed": true, "evidence": "'리서치 요약' 섹션이 있으며 비건 시장 규모, 플렉시테리언 트렌드 등 정보 포함"},
+    {"text": "X 포스트 포함", "passed": true, "evidence": "X (Twitter) 섹션에 포스트 1개 존재"},
+    {"text": "Threads 포스트 포함", "passed": true, "evidence": "Threads 섹션에 포스트 1개 존재"},
+    {"text": "Facebook 포스트 포함", "passed": true, "evidence": "Facebook 섹션에 포스트 1개 존재"},
+    {"text": "X 포스트 280자 이내", "passed": true, "evidence": "166자로 280자 제한 준수"},
+    {"text": "Threads 포스트 500자 이내", "passed": true, "evidence": "327자로 500자 제한 준수"},
+    {"text": "해시태그 포함", "passed": true, "evidence": "#비건 #플렉시테리언 #식물성식품 등 해시태그 포함"},
+    {"text": "플랫폼별 톤 차이", "passed": true, "evidence": "X는 짧고 펀치력 있음, Threads는 '~하더라고요' 캐주얼체, Facebook은 '~합니다' 정중체로 명확히 구분됨"},
+    {"text": "한국어 작성", "passed": true, "evidence": "전체 한국어로 작성됨"}
+  ]
+}

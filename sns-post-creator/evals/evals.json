@@ -1,0 +1,23 @@
+{
+  "skill_name": "sns-post-creator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "요즘 핫한 비건 식품 트렌드에 대해 SNS 포스트 만들어줘",
+      "expected_output": "비건 식품 관련 리서치 요약 + X/Threads/Facebook 각각에 맞는 톤과 길이의 포스트 3개",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "우리 회사가 다음 주에 AI 기반 번역 앱을 출시하는데 홍보 포스트 좀 써줘. 앱 이름은 LinguaFlow이고, 실시간 음성 번역이 가능하고 30개 언어를 지원해",
+      "expected_output": "AI 번역 앱 관련 리서치 + 제품 홍보에 적합한 X/Threads/Facebook 포스트 3개",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "climate change and ocean plastic pollution에 대해 영어로 소셜미디어 글 작성해줘",
+      "expected_output": "기후변화/해양 플라스틱 관련 영어 리서치 요약 + 영어로 된 X/Threads/Facebook 포스트 3개",
+      "files": []
+    }
+  ]
+}

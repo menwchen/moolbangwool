@@ -1,0 +1,16 @@
+{
+  "eval_id": 1,
+  "eval_name": "vegan-trend-korean",
+  "prompt": "요즘 핫한 비건 식품 트렌드에 대해 SNS 포스트 만들어줘",
+  "assertions": [
+    {"name": "has_research_summary", "description": "리서치 요약 섹션이 포함되어 있다", "type": "contains_section"},
+    {"name": "has_x_post", "description": "X(Twitter) 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_threads_post", "description": "Threads 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_facebook_post", "description": "Facebook 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "x_char_limit", "description": "X 포스트가 280자 이내이다", "type": "char_count"},
+    {"name": "threads_char_limit", "description": "Threads 포스트가 500자 이내이다", "type": "char_count"},
+    {"name": "has_hashtags", "description": "해시태그가 포함되어 있다", "type": "contains"},
+    {"name": "tone_differentiation", "description": "플랫폼별로 톤/스타일이 구분되어 있다", "type": "qualitative"},
+    {"name": "korean_language", "description": "한국어로 작성되어 있다", "type": "language"}
+  ]
+}

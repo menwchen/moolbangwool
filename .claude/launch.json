@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "market-watch-dev",
+      "runtimeExecutable": "/Users/jongunsong/MarketPulse/.venv/bin/python",
+      "runtimeArgs": ["/Users/jongunsong/MarketPulse/web/app.py"],
+      "port": 8080
+    },
+    {
+      "name": "institute-homepage",
+      "runtimeExecutable": "/usr/bin/python3",
+      "runtimeArgs": ["-m", "http.server", "3030", "-d", "먹고사는문제연구소"],
+      "port": 3030
+    }
+  ]
+}

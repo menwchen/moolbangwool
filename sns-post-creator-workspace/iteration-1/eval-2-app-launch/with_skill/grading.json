@@ -1,0 +1,16 @@
+{
+  "eval_id": 2,
+  "run_type": "with_skill",
+  "expectations": [
+    {"text": "리서치 요약 섹션 포함", "passed": true, "evidence": "AI 번역 시장 규모, 경쟁 앱 대비 포지셔닝, SNS 콘텐츠 트렌드 포함"},
+    {"text": "X 포스트 포함", "passed": true, "evidence": "X 포스트 1개 존재"},
+    {"text": "Threads 포스트 포함", "passed": true, "evidence": "Threads 포스트 1개 존재"},
+    {"text": "Facebook 포스트 포함", "passed": true, "evidence": "Facebook 포스트 1개 존재"},
+    {"text": "X 포스트 280자 이내", "passed": true, "evidence": "131자로 280자 제한 준수"},
+    {"text": "Threads 포스트 500자 이내", "passed": true, "evidence": "252자로 500자 제한 준수"},
+    {"text": "LinguaFlow 앱 이름 언급", "passed": true, "evidence": "3개 플랫폼 모두에서 LinguaFlow 언급"},
+    {"text": "핵심 기능 언급 (실시간 음성 번역, 30개 언어)", "passed": true, "evidence": "모든 포스트에서 실시간 음성 번역, 30개 언어 지원 언급"},
+    {"text": "홍보 톤 적합성", "passed": true, "evidence": "제품 출시 홍보에 적합한 흥미 유발 + 기능 소개 톤"},
+    {"text": "플랫폼별 톤 차이", "passed": true, "evidence": "X는 '언어 장벽이 사라집니다' 짧은 hook, Threads는 여행 경험 기반 캐주얼체, Facebook은 상세 기능 나열 + CTA"}
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "eval_id": 2,
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "리서치 요약 섹션 포함", "passed": false, "evidence": "리서치 없이 앱 정보 요약만 있음 (사용자 제공 정보 반복)"},
+    {"text": "X 포스트 포함", "passed": true, "evidence": "X 포스트 3개 존재"},
+    {"text": "Threads 포스트 포함", "passed": true, "evidence": "Threads 포스트 2개 존재"},
+    {"text": "Facebook 포스트 포함", "passed": true, "evidence": "Facebook 포스트 2개 존재"},
+    {"text": "X 포스트 280자 이내", "passed": false, "evidence": "메인 포스트가 280자를 크게 초과 (체크리스트 형태)"},
+    {"text": "Threads 포스트 500자 이내", "passed": false, "evidence": "메인 포스트가 500자 초과"},
+    {"text": "LinguaFlow 앱 이름 언급", "passed": true, "evidence": "모든 포스트에서 LinguaFlow 언급"},
+    {"text": "핵심 기능 언급 (실시간 음성 번역, 30개 언어)", "passed": true, "evidence": "핵심 기능 언급됨"},
+    {"text": "홍보 톤 적합성", "passed": true, "evidence": "홍보 톤이지만 다소 공식적/딱딱함"},
+    {"text": "플랫폼별 톤 차이", "passed": false, "evidence": "X와 Threads 모두 인용구 형태로 비슷한 톤, Facebook만 약간 차이"}
+  ]
+}

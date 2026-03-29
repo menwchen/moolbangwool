@@ -1,0 +1,16 @@
+{
+  "eval_id": 3,
+  "eval_name": "climate-english-posts",
+  "prompt": "climate change and ocean plastic pollution에 대해 영어로 소셜미디어 글 작성해줘",
+  "assertions": [
+    {"name": "has_research_summary", "description": "리서치 요약 섹션이 포함되어 있다", "type": "contains_section"},
+    {"name": "has_x_post", "description": "X(Twitter) 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_threads_post", "description": "Threads 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_facebook_post", "description": "Facebook 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "x_char_limit", "description": "X 포스트가 280자 이내이다", "type": "char_count"},
+    {"name": "threads_char_limit", "description": "Threads 포스트가 500자 이내이다", "type": "char_count"},
+    {"name": "english_language", "description": "영어로 작성되어 있다", "type": "language"},
+    {"name": "has_hashtags", "description": "해시태그가 포함되어 있다", "type": "contains"},
+    {"name": "tone_differentiation", "description": "플랫폼별로 톤/스타일이 구분되어 있다", "type": "qualitative"}
+  ]
+}

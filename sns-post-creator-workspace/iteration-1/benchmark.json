@@ -1,0 +1,87 @@
+{
+  "skill_name": "sns-post-creator",
+  "iteration": 1,
+  "configurations": [
+    {
+      "name": "with_skill",
+      "results": [
+        {
+          "eval_name": "vegan-trend-korean",
+          "pass_rate": 1.0,
+          "passed": 9,
+          "total": 9,
+          "tokens": 100967,
+          "duration_seconds": 71.0
+        },
+        {
+          "eval_name": "app-launch-promotion",
+          "pass_rate": 1.0,
+          "passed": 10,
+          "total": 10,
+          "tokens": 100897,
+          "duration_seconds": 69.7
+        },
+        {
+          "eval_name": "climate-english-posts",
+          "pass_rate": 1.0,
+          "passed": 9,
+          "total": 9,
+          "tokens": 100307,
+          "duration_seconds": 61.9
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 1.0,
+        "stddev_pass_rate": 0.0,
+        "mean_tokens": 100724,
+        "mean_duration_seconds": 67.5
+      }
+    },
+    {
+      "name": "without_skill",
+      "results": [
+        {
+          "eval_name": "vegan-trend-korean",
+          "pass_rate": 0.556,
+          "passed": 5,
+          "total": 9,
+          "tokens": 97653,
+          "duration_seconds": 118.8
+        },
+        {
+          "eval_name": "app-launch-promotion",
+          "pass_rate": 0.6,
+          "passed": 6,
+          "total": 10,
+          "tokens": 96755,
+          "duration_seconds": 62.8
+        },
+        {
+          "eval_name": "climate-english-posts",
+          "pass_rate": 0.444,
+          "passed": 4,
+          "total": 9,
+          "tokens": 95874,
+          "duration_seconds": 54.9
+        }
+      ],
+      "aggregate": {
+        "mean_pass_rate": 0.533,
+        "stddev_pass_rate": 0.065,
+        "mean_tokens": 96761,
+        "mean_duration_seconds": 78.8
+      }
+    }
+  ],
+  "delta": {
+    "pass_rate": "+46.7%",
+    "tokens": "+4.1%",
+    "duration": "-14.3%"
+  },
+  "analyst_observations": [
+    "스킬 사용 시 pass rate 100% vs 스킬 없이 53.3% — 큰 차이",
+    "가장 큰 차이를 만드는 항목: 글자 제한 준수 (with_skill: 6/6, without: 0/6), 플랫폼별 톤 차이 (with: 3/3, without: 0/3), 리서치 요약 (with: 3/3, without: 0/3)",
+    "without_skill은 플랫폼당 여러 개의 포스트를 생성하는 경향 (X 3개, Threads 2개 등)이 있지만 글자 제한을 지키지 않음",
+    "토큰 사용량은 비슷하지만 스킬이 더 일관된 출력 형식을 생성함"
+  ]
+}

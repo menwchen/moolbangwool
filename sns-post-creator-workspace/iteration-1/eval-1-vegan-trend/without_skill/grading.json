@@ -1,0 +1,15 @@
+{
+  "eval_id": 1,
+  "run_type": "without_skill",
+  "expectations": [
+    {"text": "리서치 요약 섹션 포함", "passed": false, "evidence": "별도의 리서치 요약 섹션 없이 바로 포스트로 시작"},
+    {"text": "X 포스트 포함", "passed": true, "evidence": "X 포스트 3개 존재"},
+    {"text": "Threads 포스트 포함", "passed": true, "evidence": "Threads 포스트 2개 존재"},
+    {"text": "Facebook 포스트 포함", "passed": true, "evidence": "Facebook 포스트 1개 존재"},
+    {"text": "X 포스트 280자 이내", "passed": false, "evidence": "포스트 1이 280자를 넘음 (리스트 형태로 길게 작성)"},
+    {"text": "Threads 포스트 500자 이내", "passed": false, "evidence": "포스트 1, 2 모두 500자를 크게 초과"},
+    {"text": "해시태그 포함", "passed": true, "evidence": "각 포스트에 해시태그 포함"},
+    {"text": "플랫폼별 톤 차이", "passed": false, "evidence": "X와 Threads 모두 비슷한 설명체로 작성, 뚜렷한 톤 차이 없음"},
+    {"text": "한국어 작성", "passed": true, "evidence": "전체 한국어로 작성됨"}
+  ]
+}

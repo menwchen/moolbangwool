@@ -1,0 +1,17 @@
+{
+  "eval_id": 2,
+  "eval_name": "app-launch-promotion",
+  "prompt": "우리 회사가 다음 주에 AI 기반 번역 앱을 출시하는데 홍보 포스트 좀 써줘. 앱 이름은 LinguaFlow이고, 실시간 음성 번역이 가능하고 30개 언어를 지원해",
+  "assertions": [
+    {"name": "has_research_summary", "description": "리서치 요약 섹션이 포함되어 있다", "type": "contains_section"},
+    {"name": "has_x_post", "description": "X(Twitter) 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_threads_post", "description": "Threads 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "has_facebook_post", "description": "Facebook 포스트가 포함되어 있다", "type": "contains_section"},
+    {"name": "x_char_limit", "description": "X 포스트가 280자 이내이다", "type": "char_count"},
+    {"name": "threads_char_limit", "description": "Threads 포스트가 500자 이내이다", "type": "char_count"},
+    {"name": "mentions_app_name", "description": "LinguaFlow 앱 이름이 포스트에 언급되어 있다", "type": "contains"},
+    {"name": "mentions_key_features", "description": "실시간 음성 번역, 30개 언어 등 핵심 기능이 언급되어 있다", "type": "contains"},
+    {"name": "promotional_tone", "description": "홍보/마케팅에 적합한 톤으로 작성되어 있다", "type": "qualitative"},
+    {"name": "tone_differentiation", "description": "플랫폼별로 톤/스타일이 구분되어 있다", "type": "qualitative"}
+  ]
+}
