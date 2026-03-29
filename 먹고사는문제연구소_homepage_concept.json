@@ -1,0 +1,364 @@
+{
+  "organization": {
+    "name_ko": "사단법인 먹고사는문제연구소",
+    "name_en": "Bread & Butter Issues Research Institute",
+    "slogan": "통일과 민생, 내일을 연구합니다",
+    "sub_slogan": "한반도 평화와 국민 삶의 질 향상을 위한 정책연구",
+    "description": "먹고사는문제연구소는 통일 및 민생문제를 전문적으로 연구하는 정책연구기관입니다. 민주당 기반의 오랜 정책연구 전통 위에서, 한반도 평화와 국민의 실질적 삶의 개선을 위한 실용적 정책 대안을 제시합니다.",
+    "established": "설립연도 기입 필요",
+    "legal_form": "사단법인",
+    "location": {
+      "address": "서울특별시 영등포구 여의도동 (상세주소 기입 필요)",
+      "district": "여의도"
+    },
+    "contact": {
+      "phone": "02-XXX-XXXX",
+      "fax": "02-XXX-XXXX",
+      "email": "info@breadandbutter.or.kr"
+    }
+  },
+
+  "design_concept": {
+    "theme": "신뢰감 있는 진보 정책연구소",
+    "primary_color": "#1B3A5C",
+    "secondary_color": "#2E7D32",
+    "accent_color": "#F9A825",
+    "background_color": "#FAFAFA",
+    "text_color": "#212121",
+    "color_rationale": {
+      "primary": "짙은 남색 - 신뢰, 전문성, 정책의 무게감",
+      "secondary": "그린 - 민생, 성장, 희망",
+      "accent": "골드/앰버 - 따뜻함, 국민의 삶, 밥상(먹고사는 문제)"
+    },
+    "typography": {
+      "heading": "Pretendard Bold / Noto Sans KR Bold",
+      "body": "Pretendard Regular / Noto Sans KR Regular",
+      "style": "깔끔하고 권위있으면서도 접근성 높은 서체"
+    },
+    "overall_tone": "전문적이면서도 따뜻한, 국민 눈높이의 정책연구소",
+    "visual_elements": [
+      "한반도 실루엣 모티프",
+      "밥상/곡식 아이콘 (연구소 정체성 반영)",
+      "국회의사당/여의도 스카이라인 (배경 이미지)"
+    ]
+  },
+
+  "site_structure": {
+    "pages": [
+      {
+        "id": "home",
+        "title": "홈",
+        "sections": [
+          {
+            "type": "hero",
+            "content": "통일과 민생, 내일을 연구합니다",
+            "background": "여의도 스카이라인 또는 한반도 이미지",
+            "cta_buttons": ["연구보고서 보기", "연구소 소개"]
+          },
+          {
+            "type": "mission_statement",
+            "title": "우리의 사명",
+            "items": [
+              {
+                "icon": "handshake",
+                "title": "한반도 평화·통일",
+                "desc": "실현 가능한 통일 정책과 남북 교류 방안 연구"
+              },
+              {
+                "icon": "people",
+                "title": "민생경제",
+                "desc": "국민의 먹고사는 문제 해결을 위한 정책 대안 제시"
+              },
+              {
+                "icon": "policy",
+                "title": "정책연구",
+                "desc": "현장 중심의 실용적 정책연구와 입법지원"
+              }
+            ]
+          },
+          {
+            "type": "latest_reports",
+            "title": "최신 연구보고서",
+            "display": "카드형 3열 그리드",
+            "count": 6
+          },
+          {
+            "type": "news_events",
+            "title": "소식 & 일정",
+            "tabs": ["공지사항", "언론보도", "세미나/토론회"]
+          },
+          {
+            "type": "stats_counter",
+            "title": "연구소 현황",
+            "items": [
+              { "label": "발간 보고서", "value": "000+", "unit": "건" },
+              { "label": "정책 세미나", "value": "000+", "unit": "회" },
+              { "label": "연구위원", "value": "00+", "unit": "명" },
+              { "label": "연구 분야", "value": "00+", "unit": "개" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "about",
+        "title": "연구소 소개",
+        "sub_pages": [
+          {
+            "id": "greeting",
+            "title": "인사말",
+            "content": "이사장/소장 인사말 및 사진"
+          },
+          {
+            "id": "history",
+            "title": "연혁",
+            "content": "타임라인 형식의 주요 연혁"
+          },
+          {
+            "id": "vision",
+            "title": "비전과 미션",
+            "content": "연구소 비전, 미션, 핵심가치"
+          },
+          {
+            "id": "organization",
+            "title": "조직도",
+            "content": "이사회, 연구부서, 행정부서 조직도"
+          },
+          {
+            "id": "people",
+            "title": "연구진 소개",
+            "content": "연구위원 프로필 카드 (사진, 전공, 주요 연구분야)"
+          },
+          {
+            "id": "ci",
+            "title": "CI 소개",
+            "content": "로고, 심볼 의미 설명"
+          }
+        ]
+      },
+      {
+        "id": "research",
+        "title": "연구사업",
+        "sub_pages": [
+          {
+            "id": "unification",
+            "title": "통일·평화 연구",
+            "topics": [
+              "남북관계 및 대북정책",
+              "한반도 평화체제",
+              "통일경제·비용편익 분석",
+              "북한 사회·경제 연구",
+              "동북아 국제관계"
+            ]
+          },
+          {
+            "id": "livelihood",
+            "title": "민생경제 연구",
+            "topics": [
+              "물가·주거 안정 정책",
+              "소득 불평등·양극화 해소",
+              "일자리·노동 정책",
+              "사회안전망·복지 정책",
+              "중소기업·자영업자 지원",
+              "농어촌·지역균형 발전"
+            ]
+          },
+          {
+            "id": "policy_support",
+            "title": "정책지원·입법연구",
+            "topics": [
+              "국회 입법지원 연구",
+              "정책평가 및 성과분석",
+              "여론조사·정책 모니터링"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "publications",
+        "title": "연구성과",
+        "sub_pages": [
+          {
+            "id": "reports",
+            "title": "연구보고서",
+            "features": ["분야별 필터", "연도별 필터", "PDF 다운로드", "검색"]
+          },
+          {
+            "id": "policy_briefs",
+            "title": "정책브리프",
+            "description": "짧은 이슈 분석 자료"
+          },
+          {
+            "id": "issue_papers",
+            "title": "이슈페이퍼",
+            "description": "시의성 있는 현안 분석"
+          },
+          {
+            "id": "periodicals",
+            "title": "정기간행물",
+            "description": "월간/분기 리포트"
+          },
+          {
+            "id": "columns",
+            "title": "칼럼·기고",
+            "description": "연구위원 칼럼 및 외부 기고"
+          }
+        ]
+      },
+      {
+        "id": "activities",
+        "title": "활동",
+        "sub_pages": [
+          {
+            "id": "seminars",
+            "title": "세미나·토론회",
+            "content": "일정, 발제문, 녹화영상"
+          },
+          {
+            "id": "forums",
+            "title": "정책포럼",
+            "content": "정기 포럼 시리즈"
+          },
+          {
+            "id": "lectures",
+            "title": "시민강좌",
+            "content": "시민 대상 열린 강좌"
+          },
+          {
+            "id": "cooperation",
+            "title": "국내외 교류협력",
+            "content": "MOU 체결 기관, 공동연구"
+          }
+        ]
+      },
+      {
+        "id": "media",
+        "title": "미디어",
+        "sub_pages": [
+          {
+            "id": "press",
+            "title": "보도자료",
+            "content": "연구소 보도자료"
+          },
+          {
+            "id": "news",
+            "title": "언론보도",
+            "content": "연구소 관련 언론 기사 클리핑"
+          },
+          {
+            "id": "video",
+            "title": "영상자료",
+            "content": "유튜브 채널 연동, 세미나 영상"
+          },
+          {
+            "id": "photo",
+            "title": "포토갤러리",
+            "content": "활동 사진"
+          }
+        ]
+      },
+      {
+        "id": "community",
+        "title": "소통",
+        "sub_pages": [
+          {
+            "id": "notice",
+            "title": "공지사항"
+          },
+          {
+            "id": "faq",
+            "title": "자주 묻는 질문"
+          },
+          {
+            "id": "contact",
+            "title": "오시는 길",
+            "content": "카카오맵/네이버맵 연동, 여의도 사무실 위치"
+          },
+          {
+            "id": "newsletter",
+            "title": "뉴스레터 구독",
+            "content": "이메일 구독 신청 폼"
+          },
+          {
+            "id": "support",
+            "title": "후원안내",
+            "content": "후원 방법, 세금 공제 안내"
+          }
+        ]
+      }
+    ]
+  },
+
+  "header": {
+    "layout": "로고(좌측) + GNB 메뉴(우측) + 검색/언어전환",
+    "sticky": true,
+    "logo_position": "left",
+    "menu_style": "드롭다운 메가메뉴",
+    "utility_menu": ["검색", "뉴스레터", "EN"]
+  },
+
+  "footer": {
+    "sections": [
+      {
+        "title": "연구소 정보",
+        "content": "사단법인 먹고사는문제연구소 | 대표: OOO | 사업자등록번호: XXX-XX-XXXXX"
+      },
+      {
+        "title": "연락처",
+        "content": "서울특별시 영등포구 여의도동 | TEL: 02-XXX-XXXX | FAX: 02-XXX-XXXX"
+      },
+      {
+        "title": "SNS",
+        "links": ["Facebook", "YouTube", "Blog", "Instagram"]
+      }
+    ],
+    "copyright": "Copyright 2024 먹고사는문제연구소. All rights reserved.",
+    "links": ["개인정보처리방침", "이용약관", "이메일무단수집거부"]
+  },
+
+  "features": {
+    "responsive": true,
+    "dark_mode": false,
+    "accessibility": "WCAG 2.1 AA 준수 목표",
+    "seo": "메타태그, 구조화 데이터(Schema.org) 적용",
+    "analytics": "Google Analytics 4",
+    "cms": "관리자 페이지를 통한 보고서/게시글 관리 권장",
+    "multilingual": "한국어(기본), 영어(선택)"
+  },
+
+  "tech_recommendation": {
+    "option_1": {
+      "name": "정적 사이트 + CMS",
+      "stack": "Next.js + Headless CMS (Strapi/Notion)",
+      "hosting": "Vercel",
+      "pros": "빠른 로딩, SEO 최적화, 저비용 운영",
+      "suitable_for": "컨텐츠 중심 연구소 홈페이지"
+    },
+    "option_2": {
+      "name": "워드프레스 기반",
+      "stack": "WordPress + 커스텀 테마",
+      "hosting": "카페24/가비아",
+      "pros": "비개발자도 관리 가능, 풍부한 플러그인",
+      "suitable_for": "자체 컨텐츠 관리가 빈번한 경우"
+    },
+    "option_3": {
+      "name": "단일 페이지 (MVP)",
+      "stack": "HTML/CSS/JS 정적 페이지",
+      "hosting": "Vercel/Netlify",
+      "pros": "빠른 제작, 최소 비용",
+      "suitable_for": "초기 런칭용 랜딩페이지"
+    }
+  },
+
+  "content_tone": {
+    "writing_style": "격식체(합쇼체) 기본, 일부 섹션은 해요체 허용",
+    "keyword_focus": [
+      "한반도 평화", "통일 정책", "민생경제", "정책연구",
+      "먹고사는 문제", "국민 삶의 질", "정책 대안",
+      "남북관계", "사회안전망", "소득 불평등"
+    ],
+    "identity_keywords": [
+      "실용적 정책", "현장 중심", "국민 눈높이",
+      "진보적 가치", "민주주의", "평화와 번영"
+    ]
+  }
+}

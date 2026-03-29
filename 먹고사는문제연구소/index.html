@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사단법인 먹고사는문제연구소 — 통일과 민생, 내일을 연구합니다</title>
+  <meta name="description" content="먹고사는문제연구소는 통일 및 민생문제를 전문적으로 연구하는 정책연구기관입니다. 한반도 평화와 국민의 실질적 삶의 개선을 위한 정책 대안을 제시합니다.">
+  <meta property="og:title" content="사단법인 먹고사는문제연구소">
+  <meta property="og:description" content="통일과 민생, 내일을 연구합니다">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1B3A5C;
+      --primary-dark: #0F2440;
+      --primary-light: #2A5580;
+      --secondary: #2E7D32;
+      --secondary-light: #4CAF50;
+      --accent: #F9A825;
+      --accent-light: #FFD54F;
+      --bg: #FAFAFA;
+      --bg-white: #FFFFFF;
+      --bg-light: #F0F4F8;
+      --text: #212121;
+      --text-secondary: #555555;
+      --text-light: #888888;
+      --border: #E0E0E0;
+      --shadow: 0 2px 12px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.12);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    header.scrolled {
+      box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .logo-text {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .logo-text small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--text-light);
+      letter-spacing: 0;
+    }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 15px;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+    }
+
+    nav a:hover { color: var(--primary); background: var(--bg-light); }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: var(--primary);
+      cursor: pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cellipse cx='650' cy='300' rx='300' ry='400' fill='rgba(255,255,255,0.03)'/%3E%3Cellipse cx='150' cy='500' rx='200' ry='250' fill='rgba(255,255,255,0.02)'/%3E%3C/svg%3E");
+      background-size: cover;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0; right: 0;
+      height: 80px;
+      background: linear-gradient(to top, var(--bg), transparent);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 500;
+      margin-bottom: 28px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-badge i { color: var(--accent); }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.25;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span { color: var(--accent-light); }
+
+    .hero p {
+      font-size: 18px;
+      line-height: 1.8;
+      opacity: 0.85;
+      margin-bottom: 36px;
+      font-weight: 300;
+    }
+
+    .hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: white;
+      border: 1.5px solid rgba(255,255,255,0.4);
+    }
+
+    .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 100px 0; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-label::before,
+    .section-label::after {
+      content: '';
+      width: 20px;
+      height: 1.5px;
+      background: var(--secondary);
+    }
+
+    .section-header h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      font-weight: 300;
+    }
+
+    /* ===== MISSION ===== */
+    .mission { background: var(--bg-white); }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .mission-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 40px 32px;
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid transparent;
+    }
+
+    .mission-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border);
+    }
+
+    .mission-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 28px;
+      color: white;
+    }
+
+    .mission-card:nth-child(1) .mission-icon {
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    }
+
+    .mission-card:nth-child(2) .mission-icon {
+      background: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+    }
+
+    .mission-card:nth-child(3) .mission-icon {
+      background: linear-gradient(135deg, #E65100, #FF9800);
+    }
+
+    .mission-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .mission-card p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* ===== RESEARCH AREAS ===== */
+    .research { background: var(--bg); }
+
+    .research-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .research-tab {
+      padding: 10px 24px;
+      border-radius: 100px;
+      border: 1.5px solid var(--border);
+      background: var(--bg-white);
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .research-tab:hover { border-color: var(--primary); color: var(--primary); }
+
+    .research-tab.active {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    .research-panel { display: none; }
+    .research-panel.active { display: block; }
+
+    .research-topics {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .topic-card {
+      background: var(--bg-white);
+      padding: 28px;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--primary);
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+    }
+
+    .topic-card:hover { transform: translateX(4px); }
+
+    .topic-card h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .topic-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .topic-card.green { border-left-color: var(--secondary); }
+    .topic-card.green h4 { color: var(--secondary); }
+    .topic-card.orange { border-left-color: #E65100; }
+    .topic-card.orange h4 { color: #E65100; }
+
+    /* ===== REPORTS ===== */
+    .reports { background: var(--bg-white); }
+
+    .reports-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .report-card {
+      background: var(--bg);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: var(--transition);
+      border: 1px solid var(--border);
+    }
+
+    .report-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .report-thumb {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      position: relative;
+    }
+
+    .report-card:nth-child(1) .report-thumb { background: linear-gradient(135deg, #1B3A5C, #2A5580); color: rgba(255,255,255,0.3); }
+    .report-card:nth-child(2) .report-thumb { background: linear-gradient(135deg, #2E7D32, #4CAF50); color: rgba(255,255,255,0.3); }
+    .report-card:nth-child(3) .report-thumb { background: linear-gradient(135deg, #E65100, #FF9800); color: rgba(255,255,255,0.3); }
+    .report-card:nth-child(4) .report-thumb { background: linear-gradient(135deg, #4A148C, #7B1FA2); color: rgba(255,255,255,0.3); }
+    .report-card:nth-child(5) .report-thumb { background: linear-gradient(135deg, #0D47A1, #1976D2); color: rgba(255,255,255,0.3); }
+    .report-card:nth-child(6) .report-thumb { background: linear-gradient(135deg, #BF360C, #E64A19); color: rgba(255,255,255,0.3); }
+
+    .report-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .report-body { padding: 24px; }
+
+    .report-body h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .report-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    .report-meta span { display: flex; align-items: center; gap: 4px; }
+
+    /* ===== NEWS ===== */
+    .news { background: var(--bg); }
+
+    .news-list { display: flex; flex-direction: column; gap: 16px; max-width: 800px; margin: 0 auto; }
+
+    .news-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: var(--bg-white);
+      padding: 20px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      transition: var(--transition);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .news-item:hover {
+      transform: translateX(4px);
+      box-shadow: var(--shadow);
+      border-color: var(--primary);
+    }
+
+    .news-badge {
+      flex-shrink: 0;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .news-badge.notice { background: var(--primary); }
+    .news-badge.seminar { background: var(--secondary); }
+    .news-badge.press { background: #E65100; }
+
+    .news-item h4 {
+      flex: 1;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      font-size: 13px;
+      color: var(--text-light);
+    }
+
+    /* ===== STATS ===== */
+    .stats {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: white;
+      padding: 80px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+
+    .stat-item .stat-number {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .stat-item .stat-label {
+      font-size: 15px;
+      opacity: 0.8;
+      font-weight: 300;
+    }
+
+    /* ===== CONTACT ===== */
+    .contact { background: var(--bg-white); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-item h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .contact-item p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .map-placeholder {
+      background: var(--bg-light);
+      border-radius: var(--radius);
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      border: 2px dashed var(--border);
+    }
+
+    .map-placeholder i { font-size: 48px; margin-bottom: 12px; }
+    .map-placeholder p { font-size: 14px; }
+
+    /* ===== NEWSLETTER ===== */
+    .newsletter {
+      background: linear-gradient(135deg, var(--secondary), #1B5E20);
+      padding: 60px 0;
+      color: white;
+    }
+
+    .newsletter-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .newsletter h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .newsletter p { opacity: 0.85; font-size: 15px; }
+
+    .newsletter-form { display: flex; gap: 8px; }
+
+    .newsletter-form input {
+      padding: 14px 20px;
+      border-radius: var(--radius-sm);
+      border: none;
+      font-size: 15px;
+      width: 300px;
+      font-family: inherit;
+    }
+
+    .newsletter-form button {
+      padding: 14px 28px;
+      border-radius: var(--radius-sm);
+      border: none;
+      background: var(--accent);
+      color: var(--primary-dark);
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+
+    .newsletter-form button:hover { background: var(--accent-light); }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.7);
+      padding: 60px 0 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-about .logo-text { color: white; margin-bottom: 16px; }
+    .footer-about .logo-text small { color: rgba(255,255,255,0.5); }
+
+    .footer-about p { font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+
+    .footer-social { display: flex; gap: 10px; }
+
+    .footer-social a {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+      font-size: 16px;
+    }
+
+    .footer-social a:hover { background: var(--accent); color: var(--primary-dark); }
+
+    footer h4 {
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    footer ul { list-style: none; }
+
+    footer ul li { margin-bottom: 10px; }
+
+    footer ul a {
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 14px;
+      transition: var(--transition);
+    }
+
+    footer ul a:hover { color: white; }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+
+    .footer-bottom a {
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    .footer-bottom a:hover { color: white; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero h1 { font-size: 38px; }
+      .mission-grid { grid-template-columns: 1fr; }
+      .reports-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      nav.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0; right: 0;
+        background: white;
+        padding: 16px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+      }
+      .hero { padding: 130px 0 80px; }
+      .hero h1 { font-size: 30px; }
+      .hero p { font-size: 16px; }
+      .hero-buttons { flex-direction: column; }
+      .btn { justify-content: center; }
+      section { padding: 70px 0; }
+      .section-header h2 { font-size: 28px; }
+      .reports-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .newsletter-inner { flex-direction: column; text-align: center; }
+      .newsletter-form { flex-direction: column; width: 100%; }
+      .newsletter-form input { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .news-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .stat-item .stat-number { font-size: 36px; }
+    }
+
+    /* ===== ANIMATIONS ===== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+        <div class="logo-text">
+          먹고사는문제연구소
+          <small>Bread &amp; Butter Issues Research Institute</small>
+        </div>
+      </a>
+      <nav id="nav">
+        <a href="#about">연구소 소개</a>
+        <a href="#research">연구분야</a>
+        <a href="#reports">연구성과</a>
+        <a href="#news">소식</a>
+        <a href="#contact">오시는 길</a>
+      </nav>
+      <button class="mobile-menu-btn" onclick="document.getElementById('nav').classList.toggle('open')">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-landmark"></i>
+          사단법인 정책연구기관 · 여의도
+        </div>
+        <h1>통일과 민생,<br><span>내일을 연구합니다</span></h1>
+        <p>먹고사는문제연구소는 한반도 평화와 국민 삶의 질 향상을 위한 실용적 정책 대안을 연구합니다. 민주적 가치 위에서 통일·민생 문제의 해법을 제시합니다.</p>
+        <div class="hero-buttons">
+          <a href="#reports" class="btn btn-primary">
+            <i class="fa-solid fa-file-lines"></i> 연구보고서 보기
+          </a>
+          <a href="#about" class="btn btn-outline">
+            <i class="fa-solid fa-arrow-right"></i> 연구소 소개
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION -->
+  <section class="mission" id="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Our Mission</div>
+        <h2>우리의 사명</h2>
+        <p>국민의 먹고사는 문제와 한반도 평화, 두 축을 중심으로 실현 가능한 정책을 연구합니다</p>
+      </div>
+      <div class="mission-grid">
+        <div class="mission-card fade-in">
+          <div class="mission-icon"><i class="fa-solid fa-dove"></i></div>
+          <h3>한반도 평화·통일</h3>
+          <p>남북관계 개선과 한반도 평화체제 구축을 위한 실현 가능한 통일 정책과 교류 방안을 연구합니다.</p>
+        </div>
+        <div class="mission-card fade-in">
+          <div class="mission-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>민생경제 연구</h3>
+          <p>물가, 주거, 일자리 등 국민의 실질적 삶에 영향을 미치는 핵심 민생 이슈에 대한 정책 대안을 제시합니다.</p>
+        </div>
+        <div class="mission-card fade-in">
+          <div class="mission-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h3>정책연구·입법지원</h3>
+          <p>현장 중심의 실용적 정책연구와 국회 입법지원을 통해 정책이 법과 제도로 실현되도록 돕습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH AREAS -->
+  <section class="research" id="research">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Research Areas</div>
+        <h2>연구분야</h2>
+        <p>통일·평화, 민생경제, 정책지원 세 분야에 걸쳐 깊이 있는 연구를 수행합니다</p>
+      </div>
+      <div class="research-tabs">
+        <button class="research-tab active" onclick="switchTab(0)">통일·평화 연구</button>
+        <button class="research-tab" onclick="switchTab(1)">민생경제 연구</button>
+        <button class="research-tab" onclick="switchTab(2)">정책지원·입법연구</button>
+      </div>
+
+      <div class="research-panel active" id="panel-0">
+        <div class="research-topics">
+          <div class="topic-card"><h4>남북관계 및 대북정책</h4><p>남북 대화 채널 복원, 교류협력 확대 방안, 대북 제재와 관여의 균형점 연구</p></div>
+          <div class="topic-card"><h4>한반도 평화체제</h4><p>종전선언, 평화협정, 비핵화 로드맵 등 항구적 평화체제 구축 방안 연구</p></div>
+          <div class="topic-card"><h4>통일경제·비용편익</h4><p>통일 비용과 편익 분석, 남북 경제통합 시나리오, 경제특구 구상 연구</p></div>
+          <div class="topic-card"><h4>북한 사회·경제</h4><p>북한 경제 동향, 시장화 추이, 사회변동, 주민 생활실태 분석</p></div>
+          <div class="topic-card"><h4>동북아 국제관계</h4><p>미중관계, 한미동맹, 동북아 다자안보, 한반도 주변 정세 분석</p></div>
+        </div>
+      </div>
+
+      <div class="research-panel" id="panel-1">
+        <div class="research-topics">
+          <div class="topic-card green"><h4>물가·주거 안정</h4><p>소비자물가 안정 대책, 부동산 시장 분석, 공공주택 확대 방안 연구</p></div>
+          <div class="topic-card green"><h4>소득 불평등·양극화</h4><p>소득분배 개선, 중산층 복원, 자산 격차 해소를 위한 정책 대안 연구</p></div>
+          <div class="topic-card green"><h4>일자리·노동 정책</h4><p>양질의 일자리 창출, 노동시장 이중구조 개선, 플랫폼 노동 보호 연구</p></div>
+          <div class="topic-card green"><h4>사회안전망·복지</h4><p>국민기초생활보장, 건강보험, 연금 개혁 등 보편적 복지체계 연구</p></div>
+          <div class="topic-card green"><h4>중소기업·자영업</h4><p>소상공인 지원, 중소기업 경쟁력 강화, 공정거래 환경 조성 연구</p></div>
+          <div class="topic-card green"><h4>지역균형 발전</h4><p>수도권 집중 완화, 농어촌 활성화, 지방소멸 대응 전략 연구</p></div>
+        </div>
+      </div>
+
+      <div class="research-panel" id="panel-2">
+        <div class="research-topics">
+          <div class="topic-card orange"><h4>국회 입법지원</h4><p>의원실 정책자문, 법안 분석, 입법영향평가, 국정감사 자료 지원</p></div>
+          <div class="topic-card orange"><h4>정책평가·성과분석</h4><p>정부 정책의 실효성 평가, 성과지표 개발, 사후 효과 분석</p></div>
+          <div class="topic-card orange"><h4>여론조사·모니터링</h4><p>정책 관련 여론 동향 파악, 국민 인식 조사, 정책 수용성 분석</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REPORTS -->
+  <section class="reports" id="reports">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Publications</div>
+        <h2>최신 연구보고서</h2>
+        <p>현안에 대한 깊이 있는 분석과 실용적 정책 대안을 담은 연구성과를 공개합니다</p>
+      </div>
+      <div class="reports-grid">
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">연구보고서</span></div>
+          <div class="report-body">
+            <h4>2026년 남북관계 전망과 정책 과제</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2026.03</span>
+              <span><i class="fa-regular fa-user"></i> 통일평화연구실</span>
+            </div>
+          </div>
+        </div>
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">정책브리프</span></div>
+          <div class="report-body">
+            <h4>물가 안정을 위한 유통구조 개선 방안</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2026.02</span>
+              <span><i class="fa-regular fa-user"></i> 민생경제연구실</span>
+            </div>
+          </div>
+        </div>
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">이슈페이퍼</span></div>
+          <div class="report-body">
+            <h4>청년 주거 불안정 실태와 공공임대 확대 전략</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2026.02</span>
+              <span><i class="fa-regular fa-user"></i> 민생경제연구실</span>
+            </div>
+          </div>
+        </div>
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">연구보고서</span></div>
+          <div class="report-body">
+            <h4>한반도 평화경제 실현을 위한 남북경협 로드맵</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2026.01</span>
+              <span><i class="fa-regular fa-user"></i> 통일평화연구실</span>
+            </div>
+          </div>
+        </div>
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">정책브리프</span></div>
+          <div class="report-body">
+            <h4>소상공인 경영 안정화를 위한 금융지원 체계 개편</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2026.01</span>
+              <span><i class="fa-regular fa-user"></i> 민생경제연구실</span>
+            </div>
+          </div>
+        </div>
+        <div class="report-card fade-in">
+          <div class="report-thumb"><i class="fa-solid fa-file-pdf"></i><span class="report-tag">이슈페이퍼</span></div>
+          <div class="report-body">
+            <h4>지방소멸 위기 지역의 인구 유입 전략 연구</h4>
+            <div class="report-meta">
+              <span><i class="fa-regular fa-calendar"></i> 2025.12</span>
+              <span><i class="fa-regular fa-user"></i> 민생경제연구실</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">News &amp; Events</div>
+        <h2>소식</h2>
+        <p>연구소의 최신 소식과 주요 활동을 전합니다</p>
+      </div>
+      <div class="news-list fade-in">
+        <a href="#" class="news-item">
+          <span class="news-badge seminar">세미나</span>
+          <h4>제42회 정책토론회 '2026 한반도 정세와 남북관계 전망' 개최 안내</h4>
+          <span class="news-date">2026.03.25</span>
+        </a>
+        <a href="#" class="news-item">
+          <span class="news-badge notice">공지</span>
+          <h4>2026년 상반기 객원연구위원 공개 모집</h4>
+          <span class="news-date">2026.03.18</span>
+        </a>
+        <a href="#" class="news-item">
+          <span class="news-badge press">언론</span>
+          <h4>[한겨레] 먹고사는문제연구소 "물가 안정 위해 유통 중간마진 개혁 시급"</h4>
+          <span class="news-date">2026.03.10</span>
+        </a>
+        <a href="#" class="news-item">
+          <span class="news-badge seminar">세미나</span>
+          <h4>시민강좌 '통일 한반도의 경제적 가능성' 수강생 모집</h4>
+          <span class="news-date">2026.03.05</span>
+        </a>
+        <a href="#" class="news-item">
+          <span class="news-badge press">언론</span>
+          <h4>[경향신문] "청년 주거 불안정, 공공임대 30만호 확충이 급선무"</h4>
+          <span class="news-date">2026.02.28</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid fade-in">
+        <div class="stat-item">
+          <div class="stat-number" data-target="320">0</div>
+          <div class="stat-label">발간 보고서</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="150">0</div>
+          <div class="stat-label">정책 세미나·토론회</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="45">0</div>
+          <div class="stat-label">소속 연구위원</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">전문 연구 분야</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">Contact</div>
+        <h2>오시는 길</h2>
+        <p>여의도에 위치한 연구소를 방문해 주세요</p>
+      </div>
+      <div class="contact-grid fade-in">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h4>주소</h4>
+              <p>서울특별시 영등포구 국회대로 70길 15<br>여의도 정책센터빌딩 5층</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4>전화</h4>
+              <p>02-784-XXXX</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>이메일</h4>
+              <p>info@breadandbutter.or.kr</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-train-subway"></i></div>
+            <div>
+              <h4>교통안내</h4>
+              <p>지하철 9호선 국회의사당역 1번 출구 도보 5분<br>지하철 5호선 여의도역 3번 출구 도보 10분</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <p>지도 영역 (카카오맵/네이버맵 연동 예정)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-inner">
+        <div>
+          <h3><i class="fa-solid fa-envelope-open-text"></i> 뉴스레터 구독</h3>
+          <p>연구소의 최신 보고서와 정책 소식을 이메일로 받아보세요.</p>
+        </div>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('구독 신청이 완료되었습니다.');">
+          <input type="email" placeholder="이메일 주소를 입력하세요" required>
+          <button type="submit">구독하기</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="logo-text">
+            먹고사는문제연구소
+            <small>Bread &amp; Butter Issues Research Institute</small>
+          </div>
+          <p>통일과 민생문제를 전문적으로 연구하는 정책연구기관입니다. 한반도 평화와 국민의 실질적 삶의 개선을 위한 실용적 정책 대안을 제시합니다.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-solid fa-blog"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>연구소</h4>
+          <ul>
+            <li><a href="#">인사말</a></li>
+            <li><a href="#">연혁</a></li>
+            <li><a href="#">비전과 미션</a></li>
+            <li><a href="#">조직도</a></li>
+            <li><a href="#">연구진 소개</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>연구</h4>
+          <ul>
+            <li><a href="#">통일·평화 연구</a></li>
+            <li><a href="#">민생경제 연구</a></li>
+            <li><a href="#">정책지원</a></li>
+            <li><a href="#">연구보고서</a></li>
+            <li><a href="#">정책브리프</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>소통</h4>
+          <ul>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">세미나·토론회</a></li>
+            <li><a href="#">뉴스레터</a></li>
+            <li><a href="#">후원안내</a></li>
+            <li><a href="#">오시는 길</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 사단법인 먹고사는문제연구소. All rights reserved.</span>
+        <div>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">이메일무단수집거부</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Header scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('header').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    // Research tabs
+    function switchTab(index) {
+      document.querySelectorAll('.research-tab').forEach((t, i) => t.classList.toggle('active', i === index));
+      document.querySelectorAll('.research-panel').forEach((p, i) => p.classList.toggle('active', i === index));
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Counter animation
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.stat-number').forEach(counter => {
+            const target = +counter.dataset.target;
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                counter.textContent = target + '+';
+                clearInterval(timer);
+              } else {
+                counter.textContent = Math.floor(current) + '+';
+              }
+            }, 16);
+          });
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stats-grid').forEach(el => counterObserver.observe(el));
+
+    // Mobile menu close on link click
+    document.querySelectorAll('#nav a').forEach(a => {
+      a.addEventListener('click', () => document.getElementById('nav').classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
